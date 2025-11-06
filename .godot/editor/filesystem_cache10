@@ -1,7 +1,8 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762446401
-Character.tscn::PackedScene::596887839494190421::1762445077::0::1::::<><><>0<>0<><>::uid://bndywvtn8g3sm::::res://character_body_2d.gd<>uid://dqi3ekucw6yus::::res://pixilart-1762433298810.png
-character_body_2d.gd::GDScript::3306566412518669568::1762445077::0::1::::<>CharacterBody2D<><>0<>0<><>::
-icon.svg::CompressedTexture2D::7796169713952296859::1762445077::1762446402::1::::<><><>0<>0<>35c53703bb8a269e08e193c57533a5a3<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-pixil-frame-0.png::CompressedTexture2D::5286260435874066353::1762446242::1762446402::1::::<><><>0<>0<>aa780f1a084970070573ad7ce36cf11b<>res://.godot/imported/pixil-frame-0.png-ad73aed19b00fd55eeaf2db0cae8f8ff.ctex::
-pixilart-1762433298810.png::CompressedTexture2D::8300506346544486962::1762445077::1762446402::1::::<><><>0<>0<>af40cbaaff129a3198bc5f12d1080b5d<>res://.godot/imported/pixilart-1762433298810.png-370e7071d30f9217b3a951a72211381b.ctex::
+::res://::1762461167
+Character.tscn::PackedScene::596887839494190421::1762461139::0::1::::<><><>0<>0<><>::uid://bndywvtn8g3sm::::res://character_body_2d.gd<>uid://dqi3ekucw6yus::::res://pixilart-1762433298810.png<>uid://chkx64hxaoiab::::res://pixil-frame-0.png
+character_body_2d.gd::GDScript::3306566412518669568::1762461040::0::1::::<>CharacterBody2D<><>0<>0<><>::
+house(concept).png::CompressedTexture2D::8072024695548116528::1762448011::1762461169::1::::<><><>0<>0<>4ae6a661bb5c66b710a0512ca940fcab<>res://.godot/imported/house(concept).png-5b19126436c175f75d6c712dd645935a.ctex::
+icon.svg::CompressedTexture2D::7796169713952296859::1762450435::1762450454::1::::<><><>0<>0<>35c53703bb8a269e08e193c57533a5a3<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+pixil-frame-0.png::CompressedTexture2D::5286260435874066353::1762450435::1762450454::1::::<><><>0<>0<>aa780f1a084970070573ad7ce36cf11b<>res://.godot/imported/pixil-frame-0.png-ad73aed19b00fd55eeaf2db0cae8f8ff.ctex::
+pixilart-1762433298810.png::CompressedTexture2D::8300506346544486962::1762450435::1762450454::1::::<><><>0<>0<>af40cbaaff129a3198bc5f12d1080b5d<>res://.godot/imported/pixilart-1762433298810.png-370e7071d30f9217b3a951a72211381b.ctex::

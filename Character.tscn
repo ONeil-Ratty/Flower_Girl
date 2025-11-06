@@ -1,12 +1,30 @@
-[gd_scene load_steps=25 format=3 uid="uid://irewj1fxyqyv"]
+[gd_scene load_steps=31 format=3 uid="uid://irewj1fxyqyv"]
 
 [ext_resource type="Script" uid="uid://bndywvtn8g3sm" path="res://character_body_2d.gd" id="1_7ig0a"]
 [ext_resource type="Texture2D" uid="uid://dqi3ekucw6yus" path="res://pixilart-1762433298810.png" id="1_oolk3"]
+[ext_resource type="Texture2D" uid="uid://dnafcj6arya6c" path="res://house(concept).png" id="2_cxxw8"]
 [ext_resource type="Texture2D" uid="uid://chkx64hxaoiab" path="res://pixil-frame-0.png" id="3_lcuhw"]
+[ext_resource type="PackedScene" uid="uid://7mof48rq6p7x" path="res://playerHUD.tscn" id="5_cxxw8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7ig0a"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lcuhw"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cxxw8"]
+a = Vector2(-140, 35)
+b = Vector2(123, 35)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_e24yd"]
+a = Vector2(123, -59)
+b = Vector2(123, 34)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5gddd"]
+a = Vector2(-140, -71)
+b = Vector2(122, -71)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_o6gdn"]
+a = Vector2(-141, -58)
+b = Vector2(-141, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ig0a"]
 size = Vector2(12, 15)
@@ -160,17 +178,42 @@ animations = [{
 
 [node name="Character" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="House" type="StaticBody2D" parent="."]
 material = SubResource("ShaderMaterial_7ig0a")
 physics_material_override = SubResource("PhysicsMaterial_lcuhw")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="StaticBody2D"]
+[node name="House(concept)" type="Sprite2D" parent="House"]
+position = Vector2(9.536743e-07, 9.536743e-07)
+scale = Vector2(5.5781255, 4.460938)
+texture = ExtResource("2_cxxw8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House"]
+shape = SubResource("SegmentShape2D_cxxw8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="House"]
+position = Vector2(-1, 2)
+shape = SubResource("SegmentShape2D_e24yd")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="House"]
+position = Vector2(1, 15)
+shape = SubResource("SegmentShape2D_5gddd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="House"]
+position = Vector2(2, 0)
+shape = SubResource("SegmentShape2D_o6gdn")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_7ig0a")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_7ig0a")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D/CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_5gddd")
 animation = &"walk_left"
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(4, 4)
+
+[node name="PlayerHud" parent="." instance=ExtResource("5_cxxw8")]
